@@ -16,7 +16,26 @@ body{
     margin-left: 10px;
 }
 
+.recentlyOpened{
+    margin-top: 20px;
+    display: block;
+    background-color: lightgray;
+    padding-bottom: 20px;
+}
+
+.recentBooks{
+    height: 100px;
+    width: 100px;
+    background-color: lightgray;
+    margin-left: 10px;
+}
+
 .recommended .recBooks img{
     width: 100px;
     height: 100px;
   }
+
+.recentlyOpened .recentBooks img{
+  width: 100px;
+  height: 100px;
+}
