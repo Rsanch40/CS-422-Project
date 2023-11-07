@@ -1,5 +1,8 @@
-  
-.recommended{
+  .recommended{    
+    border-color: black;
+    border-style: groove;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 20px;
     display: block;
     background-color: lightgray;
@@ -14,6 +17,10 @@
 }
 
 .recentlyOpened{
+  border-color: black;
+  border-style: groove;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 20px;
     display: block;
     background-color: lightgray;
@@ -36,3 +43,23 @@
   width: 100px;
   height: 100px;
 }
+
+/* .recommended .recBooks{
+  margin-left: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.recBooks img{
+  flex: 1;
+  text-align: center;
+  color: #f2f2f2;
+  /* display: block; */
+  text-decoration: none;
+  font-size: 17px;
+} */
