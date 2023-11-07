@@ -23,7 +23,6 @@
 .navbar a:hover {
     background-color: #ddd;
     color: black;
-    text-decoration: underline;
 }
   
   /* Add a color to the active/current link */
