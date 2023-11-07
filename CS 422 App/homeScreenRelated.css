@@ -1,47 +1,47 @@
 /* Dont forget to add any major css changes to the bottom so that you dont 
 confuse what you changed. Maybe add a separator by dates to establish when something was added. */
-.recommended{    
-    border-color: black;
-    border-style: groove;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    display: block;
-    background-color: lightgray;
-    padding-bottom: 20px;
-}
-
-.recBooks{
-    height: 100px;
-    width: 100px;
-    background-color: lightgray;
-    margin-left: 10px;
-}
-
-.recentlyOpened{
+.recommended {
   border-color: black;
   border-style: groove;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    display: block;
-    background-color: lightgray;
-    padding-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  display: block;
+  background-color: lightgray;
+  padding-bottom: 20px;
 }
 
-.recentBooks{
-    height: 100px;
-    width: 100px;
-    background-color: lightgray;
-    margin-left: 10px;
+.recBooks {
+  height: 100px;
+  width: 100px;
+  background-color: lightgray;
+  margin-left: 10px;
 }
 
-.recommended .recBooks img{
-    width: 100px;
-    height: 100px;
-  }
+.recentlyOpened {
+  border-color: black;
+  border-style: groove;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  display: block;
+  background-color: lightgray;
+  padding-bottom: 20px;
+}
 
-.recentlyOpened .recentBooks img{
+.recentBooks {
+  height: 100px;
+  width: 100px;
+  background-color: lightgray;
+  margin-left: 10px;
+}
+
+.recommended .recBooks img {
+  width: 100px;
+  height: 100px;
+}
+
+.recentlyOpened .recentBooks img {
   width: 100px;
   height: 100px;
 }
