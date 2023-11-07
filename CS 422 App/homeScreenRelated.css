@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+  }
+  
+.recommended{
+    margin-top: 20px;
+    display: block;
+    background-color: lightgray;
+    padding-bottom: 20px;
+}
+
+.recBooks{
+    height: 100px;
+    width: 100px;
+    background-color: lightgray;
+    margin-left: 10px;
+}
+
+.recommended .recBooks img{
+    width: 100px;
+    height: 100px;
+  }
