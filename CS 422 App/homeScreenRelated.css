@@ -1,4 +1,6 @@
-  .recommended{    
+/* Dont forget to add any major css changes to the bottom so that you dont 
+confuse what you changed. Maybe add a separator by dates to establish when something was added. */
+.recommended{    
     border-color: black;
     border-style: groove;
     margin-left: 10px;
