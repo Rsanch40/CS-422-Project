@@ -1,0 +1,58 @@
+
+html, body{
+    background-color: gray;
+    height: 90%;
+}
+
+.layout{
+    margin-top: 10%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 30%;
+
+}
+
+.helpMenu{
+    grid-area: 1/1/1/1;
+
+    display: grid;
+    background-color: white;
+    height: 100%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 20% 20% 40%;
+}
+
+#soundImage{
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+#translateImage{
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+#unsavedImage{
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+#addWordsExplain{
+    margin: 5%;
+    grid-area: 4/1/4/3;
+}
+
+#backToReaderButton{
+    width: 100px;
+    height: 50px;
+    margin: 10%;
+}
+
