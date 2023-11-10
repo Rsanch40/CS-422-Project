@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+.container{
+    width: 90vw;
+    max-width: 62.5em;
+    border: 1px solid black;
+    position: relative;
+    margin: auto;
+}
+
+.add-flashcard-con{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.2em 1em;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.add-flashcard-con button{
+    font-size: 1em;
+    background-color: #587ef4;
+    color:white;
+    padding: 0.8em 1.2em;
+    font-weight: 600;
+    border-radius: 0.4em;
+}
+
+#card-con{
+    border: 1px solid black;
+    margin-top: 1em;
+}
+
+.word-container{
+    width: 90vw;
+    max-width: 34em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    padding: 3em 2em;
+    border-radius: 0.06em;
+    box-shadow: 0 1em 2em rgba(28,0,80,0.1);
+}
+
+.word-container h2{
+    font-size: 2.2em;
+    color: #363d55;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.error-con{
+    align-self: center;
+}
+
+#error{
+    color: #ff5353;
+    font-weight: 400;
+}
+
+.fa-xmark{
+    font-size: 1.4em;
+    background-color: #587ef4;
+    height: 1.8em;
+    width: 1.8em;
+    display: grid;
+    place-items: center;
+    color:#FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-self: flex-end;
+}
+
+label{
+    color: #363d55;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+textarea{
+    width: 100%;
+    padding: 0.7em 0.5em;
+    border: 1px solid #d0d0d0;
+    outline: none;
+    color: #414a67;
+    border-radius: 0.3em;
+    resize: none;
+}
+
+textarea:not(:last-child){
+    margin-bottom: 1.2em;
+}
+
+textarea:focus{
+    border-color: #363d55;
+}
+
+#save-btn{
+    font-size: 1em;
+    background-color: #587ef4;
+    color: #FFFFFF;
+    padding: 0.6em 0;
+    border-radius: 0.3em;
+    font-weight: 600;
+}
+
+.hide{
+    display: none;
+}

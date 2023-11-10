@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel = "stylesheet" href="navBar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel = "stylesheet" href="navBar.css"/>
+    <link rel = "stylesheet" href="cssFiles/vocabularyScreen.css"/>
+    <title> Vocabulary Section </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
 </head>
     <!-- Check navBar.css for more styling on how the navbar looks
          Replace the #'s with (something).html to link it to link it in order to switch around screens.
     -->
 <body>
+    <div class="container">
+        <div class="add-flashcard-con">
+            <button id="add-flashcard"> Add Flashcard</button>
+        </div>
+        <!--Used for the Display of Word,Definition,Example-->
+        <div id="card-con">
+            <div class="card-list-container">
+
+            </div>
+        </div>
+    </div>
+
+    <!--Input Form for user to fill word and definition-->
+    <div class="word-container hide" id="add-word-card">
+        <h2> Add Flashcard </h2>
+        <div class="wrapper">
+            <!--Error message-->
+            <div class="error-con">
+                <span class="hide" id="error"> Input fields cannot be empty! </span>
+            </div>
+            <!-- Close Button -->
+            <i class="fa-solid fa-xmark" id="close-btn"></i>
+        </div>
+        <label for="word"> Word: </label>
+        <textarea class="input" id="word" placeholder="Type the word here..." rows="3"></textarea>
+        <label for="definition"> Definition: </label>
+        <textarea class="input" id="definition" placeholder="Type the word here...(n/a works)" rows="3"></textarea>
+        <label for="example">Example: </label>
+        <textarea class="input" id="example" placeholder="Type your example here...(n/a works)" rows="4"></textarea>
+
+        <button id="save-btn">Save</button>
+    </div>
+
     <div class="navbar" id="bottomNavbar">
         <a href="vocabularyScreen.html" class="active">
             <div class = "nav-item">
@@ -45,5 +85,8 @@
             </div>
         </a>
     </div>
+
+    <!-- Script -->
+    <script src="javaScriptFiles/vocabularyJavascript.js"></script>
 </body>
 </html>
