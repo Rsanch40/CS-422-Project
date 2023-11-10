@@ -83,16 +83,17 @@ button{
 
 .fa-xmark{
     font-size: 1.4em;
-    background-color: #587ef4;
+    /* background-color: #587ef4; */
     height: 1.8em;
     width: 1.8em;
     display: grid;
     place-items: center;
-    color:#FFFFFF;
-    border-radius: 50%;
+    color: black;
+    /* border-radius: 50%; */
     cursor: pointer;
     justify-self: flex-end;
 }
+
 
 label{
     color: #363d55;

@@ -41,9 +41,9 @@ closeBtn.addEventListener("click",(hideWord = () =>{
 // Submit Word
 cardButton.addEventListener("click", (submitWord = () =>{
     editBool = false;
-    tempWord = word.value.trim();
-    tempDef = definition.value.trim();
-    tempEx = example.value.trim();
+    tempWord = "Word: " + word.value.trim();
+    tempDef = "Definition: " + definition.value.trim();
+    tempEx = "Example: " + example.value.trim();
     if(!tempWord || !tempDef || !tempEx){
         errorMessage.classList.remove("hide");
     } else {
