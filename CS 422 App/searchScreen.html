@@ -3,12 +3,43 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel = "stylesheet" href="navBar.css">
+    <link rel = "stylesheet" href="cssFiles/searchScreenRelated.css"
 
 </head>
     <!-- Check navBar.css for more styling on how the navbar looks
          Replace the #'s with (something).html to link it to link it in order to switch around screens.
     -->
 <body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Search..." id="search">
+            <button type="sumbit">Search</button>
+        </div>
+    </div>
+
+    <div class="book-grid" id="bookGrid">
+        <div class="book">
+            <img src="img/book.png" alt="Harry Potter">
+            <p>Harry Potter</p>
+        </div>
+        <div class="book">
+            <img src="img/book.png" alt="Lord of the Rings">
+            <p>Lord of the Rings</p>
+        </div>
+        <div class="book">
+            <img src="img/book.png" alt="Hunger Games">
+            <p>Hunger Games</p>
+        </div>
+        <div class="book">
+            <img src="img/book.png" alt="The Bible">
+            <p>The Bible</p>
+        </div>
+        <div class="book">
+            <img src="img/book.png" alt="Dictionary">
+            <p>Dictionary</p>
+        </div>
+    </div>
+
     <div class="navbar" id="bottomNavbar">
         <a href="vocabularyScreen.html">
             <div class = "nav-item">
@@ -45,5 +76,24 @@
             </div>
         </a>
     </div>
+
+
+    <script>
+        // JavaScript for filtering books based on search input
+        const searchInput = document.getElementById('search');
+        const bookGrid = document.getElementById('bookGrid');
+        const books = document.querySelectorAll('.book');
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            books.forEach(book => {
+                const title = book.querySelector('p').innerText.toLowerCase();
+                const isVisible = title.includes(searchTerm);
+                book.style.display = isVisible ? 'block' : 'none';
+            });
+        });
+    </script>
+
 </body>
 </html>
