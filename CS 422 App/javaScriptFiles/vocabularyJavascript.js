@@ -127,7 +127,7 @@ const modifyElement = (element,edit=false) => {
         word.value = parentWord;
         definition.value = parentDef;
         example.value = parentEx;
-        // disableButtons(true);
+        disableButtons(true);
     }
     parentDiv.remove();
 };

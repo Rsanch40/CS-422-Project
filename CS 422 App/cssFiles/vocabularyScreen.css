@@ -12,7 +12,6 @@ body{
 .container{
     width: 90vw;
     max-width: 62.5em;
-    border: 1px solid black;
     position: relative;
     margin: auto;
 }
@@ -39,14 +38,12 @@ button{
 }
 
 #card-con{
-    border: 1px solid black;
     margin-top: 1em;
 }
 
 .word-container{
     width: 90vw;
     max-width: 34em;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,6 +127,77 @@ textarea:focus{
     font-weight: 600;
 }
 
+.card-list-container{
+    display: grid;
+    padding: 0.2em;
+    gap: 1.5em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+    background-color: white;
+    box-shadow: 0 0.4em 1.2em rgba(28, 0, 80, 0.08);
+    padding: 1.2em;
+    border-radius: 0.4em;
+}
+
+.word-div, 
+.definition-div {
+    text-align: justify;
+}
+.example-div{
+    text-align:justify;
+}
+
+.definition-div{
+    margin-top: 1em;
+    font-weight: 400;
+    color: #414a67;
+}
+
+.show-hide-btn{
+    display: block;
+    background-color: #587ef4;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6em 0;
+    border-radius: 0.3em;
+}
+
+.buttons-con{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit, .delete{
+    background-color: transparent;
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+
+.edit{
+    color: #587ef4;
+}
+
+.delete{
+    color: #ff5353;
+}
+
 .hide{
     display: none;
+}
+
+@media screen and (max-width:800px){
+    .card-list-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .card-list-container{
+        grid-template-columns: 1fr;
+        gap: 1.2em;
+    }
 }
