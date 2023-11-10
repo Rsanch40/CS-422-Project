@@ -3,52 +3,36 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel = "stylesheet" href="navBar.css">
-    <link rel = "stylesheet" href="bookScreenStyle.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel = "stylesheet" href="helpScreen.css">
 
 </head>
-<script>
-
-</script>
     <!-- Check navBar.css for more styling on how the navbar looks
          Replace the #'s with (something).html to link it to link it in order to switch around screens.
     -->
     <body>
-        <div class = "bookPage">
+        <div class = "layout">
+            <div class = "helpMenu">
+                <img src="img/sound.png" height="70" width="70" id = "soundImage">
+                <p id = "soundIconExplain"> Starts the English Voice reader</p>
 
-            <button id="soundButton"><img src="img/sound.png" width="80" height = "80"></button>
+                <img src="img/translate.png" height="70" width="70" id = "translateImage">
+                <p id = "translateIconExplain"> Swaps the text to the preferred language</p>
 
+                <img src="img/unsavedIcon.png" height="70" width="70" id = "unsavedImage">
+                <p id = "unsavedIconExplain"> Saves the book to favorites</p>
 
-            <button id="helpButton" onclick="goToHelpScreen()"><img src="img/questionIcon.png" alt="help" width = "80" height="80"></button>
+                <p id = "addWordsExplain"> To add words onto the vocabulary just hold down on a word till its highlighted and then click the add vocabulary button.</p>
+            </div>
+            <button id="backToReaderButton" onclick="goToReaderScreen()">Back</button>
             
             <!-- Send user to help screen-->
             <script>
-                function goToHelpScreen() {
-                    window.location.href = "helpScreen.html";
+                function goToReaderScreen() {
+                    window.location.href = "bookScreen.html";
                 }
             </script>
-
-            
-            <div class="readerBox">
-                <p> October arrived, spreading a 
-                    damp chill over the grounds and
-                    into the castle. Madam Pomfrey, 
-                    the nurse, was kept busy by a 
-                    sudden spate of colds among the
-                    staff and students. 
-                    Her Pepperup potion worked 
-                    instantly, though it left the 
-                    drinker smoking at the ears for
-                    several hours afterward.</p>
-            </div>
-        
-
-            <button id="translateButton" > <img src="img/translate.png" alt="translate" width = "70" height="70"></button>
-
-            <button id="unsavedButton"><img src="img/unsavedIcon.png" alt="unsaved" width = "80" height="80"></button>
-
         </div>
+
 
         <div class="navbar" id="bottomNavbar">
             <a href="vocabularyScreen.html">
