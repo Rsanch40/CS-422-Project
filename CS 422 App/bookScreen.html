@@ -17,8 +17,13 @@
     <body>
         <div class = "bookPage">
 
-            <button id="soundButton"><img src="img/sound.png" width="80" height = "80"></button>
-
+            <button id="soundButton" onclick="soundClicked()"><img src="img/sound.png" width="80" height = "80"></button>
+            <script>
+                function soundClicked(){
+                    // change button color to show as "on"
+                    document.getElementById("soundButton").style.backgroundColor = "lightblue";            
+                }
+            </script>
 
             <button id="helpButton" onclick="goToHelpScreen()"><img src="img/questionIcon.png" alt="help" width = "80" height="80"></button>
             
@@ -29,9 +34,15 @@
                 }
             </script>
 
-            
+            <!-- Title -->
+            <h3 id = "bookTitle"> Harry Potter</h3>
+
+            <!-- Book text -->
             <div class="readerBox">
-                <p> October arrived, spreading a 
+                <div class="language">
+                    <p id ="language-chosen">Language: English</p>
+                </div>
+                <p id="bookText"> October arrived, spreading a 
                     damp chill over the grounds and
                     into the castle. Madam Pomfrey, 
                     the nurse, was kept busy by a 
@@ -41,13 +52,72 @@
                     instantly, though it left the 
                     drinker smoking at the ears for
                     several hours afterward.</p>
+
+                    <input class = "btn" type = "button" id = "leftButton" value=&larr; disabled/>
+                    <script>
+                        $(document).on('click', "#leftButton", function(evt)  // right button listener
+                        {
+                            var prevText = "October arrived, spreading a damp chill over the grounds andinto the castle. Madam Pomfrey, the nurse, was kept busy by a sudden spate of colds among the staff and students. Her Pepperup potion worked instantly, though it left the drinker smoking at the ears for several hours afterward.";
+
+                            document.getElementById("bookText").innerText = prevText;
+                            
+                            // enable right button
+                            var rightButton = document.getElementById("rightButton");  
+                            rightButton.disabled = false;
+        
+                            //disable left button
+                            var leftButton = document.getElementById("leftButton");  
+                            leftButton.disabled = true;
+                        });
+                    </script>  
+
+                    <input class = "btn" type = "button" id = "rightButton" value=&rarr; />
+                    <script>
+                        $(document).on('click', "#rightButton", function(evt)  // right button listener
+                        {
+                            var nextPageText = "Dudley's birthday - how could he have forgotten? Harry got slowly out of bed and started looking for socks. He found a pair under his bed and, after pulling a spider off one of them, put them on. Harry was used to spiders, because the cupboard under the stairs was full of them, and that was where he slept.";
+                            document.getElementById("bookText").innerText = nextPageText;
+                            
+                            // disable right button
+                            var rightButton = document.getElementById("rightButton");  
+                            rightButton.disabled = true;
+        
+                            //enable left button
+                            var leftButton = document.getElementById("leftButton");  
+                            leftButton.disabled = false;
+                        });
+                    </script>
             </div>
         
+            <!-- Translate text -->
+            <button id="translateButton" onclick="changeText()" > <img src="img/translate.png" alt="translate" width = "70" height="70"></button>
+            <script>
+                function changeText(){
+                    
+                    // change book text
+                    var translatedText = "Llegó octubre, esparciendo un frío húmedo por los terrenos y el interior del castillo. Madame Pomfrey, la enfermera, se mantuvo ocupada debido a una repentina oleada de resfriados entre el personal y los estudiantes. Su poción Pepperup funcionó instantáneamente, aunque dejó al bebedor humeando en los oídos durante varias horas después.";
+                    document.getElementById("bookText").innerText = translatedText;
+                    
+                    // change "language" to desired language
+                    var newLanguage = "Language: Spanish";
+                    document.getElementById("language-chosen").innerText = newLanguage;
 
-            <button id="translateButton" > <img src="img/translate.png" alt="translate" width = "70" height="70"></button>
+                    // change button color to show as "on"
+                    document.getElementById("translateButton").style.backgroundColor = "lightblue";
+                                 
+                }
+            </script>
 
-            <button id="unsavedButton"><img src="img/unsavedIcon.png" alt="unsaved" width = "80" height="80"></button>
+            <button id="unsavedButton" onclick="saveClicked()"><img src="img/unsavedIcon.png" alt="unsaved" width = "80" height="80"></button>
+            <script>
+                function saveClicked(){
+                    // change button color to show as "on"
+                    document.getElementById("unsavedButton").style.backgroundColor = "lightblue";
 
+                    // change image to "saved" version
+                    document.getElementById("unsavedButton").src = "img/savedIcon.png";
+                }
+            </script>
         </div>
 
         <div class="navbar" id="bottomNavbar">
