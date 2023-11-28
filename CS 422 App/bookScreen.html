@@ -27,15 +27,48 @@
             }
         </script>
 
+
         <button id="helpButton" onclick="goToHelpScreen()"><img src="img/questionIcon.png" alt="help" width="80"
                 height="80"></button>
 
-        <!-- Send user to help screen-->
+        <!-- Send user to help screen -->
         <script>
             function goToHelpScreen() {
-                window.location.href = "helpScreen.html";
+                // window.location.href = "helpScreen.html";
+                openHelpModal();
             }
         </script>
+
+        <script>
+            function openHelpModal() {
+                var modal = document.getElementById('helpModal');
+                modal.style.display = 'block';
+            }
+
+            function closeHelpModal() {
+                var modal = document.getElementById('helpModal');
+                modal.style.display = 'none';
+            }
+        </script>
+
+        <div id="helpModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeHelpModal()">&times;</span>
+                <div class="helpMenu">
+                    <img src="img/sound.png" height="70" width="70" id="soundImage">
+                    <p id="soundIconExplain"> Starts the English Voice reader</p>
+
+                    <img src="img/translate.png" height="70" width="70" id="translateImage">
+                    <p id="translateIconExplain"> Swaps the text to the preferred language</p>
+
+                    <img src="img/unsavedIcon.png" height="70" width="70" id="unsavedImage">
+                    <p id="unsavedIconExplain"> Saves the book to favorites</p>
+                    <!-- 
+                    <p id="addWordsExplain"> To add words onto the vocabulary just hold down on a word till its
+                        highlighted and then click the add vocabulary button.</p> -->
+                </div>
+            </div>
+        </div>
 
         <!-- Title -->
         <h3 id="bookTitle"> Harry Potter</h3>
@@ -132,16 +165,17 @@
                 }
             </script> -->
 
-            <button id="closeButton"><img src="img/x-mark.png" alt="close screen" width="80" height="80"></button>
-            <script>
-                document.getElementById('closeButton').addEventListener('click', function() {
-                  goBack();
-                });
-              
-                function goBack() {
-                  window.history.back();
-                }
-              </script>
-        </div>
-    </body>
+        <button id="closeButton"><img src="img/x-mark.png" alt="close screen" width="80" height="80"></button>
+        <script>
+            document.getElementById('closeButton').addEventListener('click', function () {
+                goBack();
+            });
+
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+
 </html>
