@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel = "stylesheet" href="navBar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="navBar.css" />
+    <link rel="stylesheet" href="cssFiles/searchScreenRelated.css" />
+
 </head>
-<script>
+<!-- Check navBar.css for more styling on how the navbar looks
+         Replace the #'s with (something).html to link it to link it in order to switch around screens.
+    -->
 
-</script>
-    <body>
-
-        <div class="navbar" id="bottomNavbar">
-            <a href="vocabularyScreen.html">
-                <div class = "nav-item">
-                    <img src="img/flashcardsW.png" alt="Vocabulary">
-                    <span>vocabulary</span>
-                </div>
-            </a>
-
-            <a href="bookLibrary.html" class="active">
-                <div class = "nav-item">
-                    <img src="img/bookW.png" alt="Book">
-                    <span>book</span>
-                </div>
-            </a>
-
-            <a href="searchScreen.html">
-                <div class = "nav-item">
-                    <img src="img/homeW.png" alt="Home">
-                    <span>home</span>
-                </div>
-            </a>
+<body>
+    <div class="book-grid" id="bookGrid">
+        <div class="book">
+            <img src="img/book.png" alt="Harry Potter">
+            <p>Harry Potter</p>
         </div>
-    </body>
+        <div class="book">
+            <img src="img/book.png" alt="Lord of the Rings">
+            <p>Lord of the Rings</p>
+        </div>
+        <div class="book">
+            <img src="img/book.png" alt="Hunger Games">
+            <p>Hunger Games</p>
+        </div>
+        <div class="book">
+            <img src="img/book.png" alt="The Bible">
+            <p>The Bible</p>
+        </div>
+        <div class="book">
+            <img src="img/book.png" alt="Dictionary">
+            <p>Dictionary</p>
+        </div>
+    </div>
+
+    <div class="navbar" id="bottomNavbar">
+        <a href="vocabularyScreen.html">
+            <div class="nav-item">
+                <img src="img/flashcardsW.png" alt="Vocabulary">
+                <span>Vocabulary</span>
+            </div>
+        </a>
+
+        <a href="searchScreen.html">
+            <div class="nav-item">
+                <img src="img/homeW.png" alt="Home">
+                <span>Home</span>
+            </div>
+        </a>
+
+        <a href="bookLibrary.html">
+            <div class="nav-item">
+                <img src="img/bookW.png" alt="book">
+                <span>Library</span>
+            </div>
+        </a>
+    </div>
+</body>
+
 </html>
