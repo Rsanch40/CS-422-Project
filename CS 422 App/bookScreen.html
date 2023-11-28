@@ -120,6 +120,15 @@
             </script> -->
 
             <button id="closeButton"><img src="img/x-mark.png" alt="close screen" width="80" height="80"></button>
+            <script>
+                document.getElementById('closeButton').addEventListener('click', function() {
+                  goBack();
+                });
+              
+                function goBack() {
+                  window.history.back();
+                }
+              </script>
         </div>
     </body>
 </html>
