@@ -56,6 +56,17 @@
     background-color: gray;
 }
 
+#closeButton{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-self: end;
+    height:80px;
+    width: 100px;
+    background-color: gray;
+}
+
 html{
     height:100%;
 }
