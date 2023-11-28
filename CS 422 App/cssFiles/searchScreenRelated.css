@@ -28,15 +28,20 @@
     cursor: pointer;
 }
 .book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px; */
+    align-items: center;
+    flex-wrap: wrap;
 }
 .book {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
 }
 .book img {
     width: 100%;
