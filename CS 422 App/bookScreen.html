@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel = "stylesheet" href="navBar.css">
-    <link rel = "stylesheet" href="bookScreenStyle.css">
+    <link rel="stylesheet" href="navBar.css">
+    <link rel="stylesheet" href="bookScreenStyle.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -11,104 +12,116 @@
 <script>
 
 </script>
-    <!-- Check navBar.css for more styling on how the navbar looks
+<!-- Check navBar.css for more styling on how the navbar looks
          Replace the #'s with (something).html to link it to link it in order to switch around screens.
     -->
-    <body>
-        <div class = "bookPage">
 
-            <button id="soundButton" onclick="soundClicked()"><img src="img/sound.png" width="80" height = "80"></button>
-            <script>
-                function soundClicked(){
-                    // change button color to show as "on"
-                    document.getElementById("soundButton").style.backgroundColor = "lightblue";            
-                }
-            </script>
+<body>
+    <div class="bookPage">
 
-            <button id="helpButton" onclick="goToHelpScreen()"><img src="img/questionIcon.png" alt="help" width = "80" height="80"></button>
-            
-            <!-- Send user to help screen-->
-            <script>
-                function goToHelpScreen() {
-                    window.location.href = "helpScreen.html";
-                }
-            </script>
+        <button id="soundButton" onclick="soundClicked()"><img src="img/sound.png" width="80" height="80"></button>
+        <script>
+            function soundClicked() {
+                // change button color to show as "on"
+                document.getElementById("soundButton").style.backgroundColor = "lightblue";
+            }
+        </script>
 
-            <!-- Title -->
-            <h3 id = "bookTitle"> Harry Potter</h3>
+        <button id="helpButton" onclick="goToHelpScreen()"><img src="img/questionIcon.png" alt="help" width="80"
+                height="80"></button>
 
-            <!-- Book text -->
-            <div class="readerBox">
-                <div class="language">
-                    <p id ="language-chosen">Language: English</p>
-                </div>
-                <p id="bookText"> October arrived, spreading a 
-                    damp chill over the grounds and
-                    into the castle. Madam Pomfrey, 
-                    the nurse, was kept busy by a 
-                    sudden spate of colds among the
-                    staff and students. 
-                    Her Pepperup potion worked 
-                    instantly, though it left the 
-                    drinker smoking at the ears for
-                    several hours afterward.</p>
+        <!-- Send user to help screen-->
+        <script>
+            function goToHelpScreen() {
+                window.location.href = "helpScreen.html";
+            }
+        </script>
 
-                    <input class = "btn" type = "button" id = "leftButton" value=&larr; disabled/>
-                    <script>
-                        $(document).on('click', "#leftButton", function(evt)  // right button listener
-                        {
-                            var prevText = "October arrived, spreading a damp chill over the grounds andinto the castle. Madam Pomfrey, the nurse, was kept busy by a sudden spate of colds among the staff and students. Her Pepperup potion worked instantly, though it left the drinker smoking at the ears for several hours afterward.";
+        <!-- Title -->
+        <h3 id="bookTitle"> Harry Potter</h3>
 
-                            document.getElementById("bookText").innerText = prevText;
-                            
-                            // enable right button
-                            var rightButton = document.getElementById("rightButton");  
-                            rightButton.disabled = false;
-        
-                            //disable left button
-                            var leftButton = document.getElementById("leftButton");  
-                            leftButton.disabled = true;
-                        });
-                    </script>  
-
-                    <input class = "btn" type = "button" id = "rightButton" value=&rarr; />
-                    <script>
-                        $(document).on('click', "#rightButton", function(evt)  // right button listener
-                        {
-                            var nextPageText = "Dudley's birthday - how could he have forgotten? Harry got slowly out of bed and started looking for socks. He found a pair under his bed and, after pulling a spider off one of them, put them on. Harry was used to spiders, because the cupboard under the stairs was full of them, and that was where he slept.";
-                            document.getElementById("bookText").innerText = nextPageText;
-                            
-                            // disable right button
-                            var rightButton = document.getElementById("rightButton");  
-                            rightButton.disabled = true;
-        
-                            //enable left button
-                            var leftButton = document.getElementById("leftButton");  
-                            leftButton.disabled = false;
-                        });
-                    </script>
+        <!-- Book text -->
+        <div class="readerBox">
+            <div class="language">
+                <p id="language-chosen">Language: English</p>
             </div>
-        
-            <!-- Translate text -->
-            <button id="translateButton" onclick="changeText()" > <img src="img/translate.png" alt="translate" width = "70" height="70"></button>
-            <script>
-                function changeText(){
-                    
-                    // change book text
-                    var translatedText = "Llegó octubre, esparciendo un frío húmedo por los terrenos y el interior del castillo. Madame Pomfrey, la enfermera, se mantuvo ocupada debido a una repentina oleada de resfriados entre el personal y los estudiantes. Su poción Pepperup funcionó instantáneamente, aunque dejó al bebedor humeando en los oídos durante varias horas después.";
-                    document.getElementById("bookText").innerText = translatedText;
-                    
-                    // change "language" to desired language
-                    var newLanguage = "Language: Spanish";
-                    document.getElementById("language-chosen").innerText = newLanguage;
+            <p id="bookText"> October arrived, spreading a
+                damp chill over the grounds and
+                into the castle. Madam Pomfrey,
+                the nurse, was kept busy by a
+                sudden spate of colds among the
+                staff and students.
+                Her Pepperup potion worked
+                instantly, though it left the
+                drinker smoking at the ears for
+                several hours afterward.</p>
 
-                    // change button color to show as "on"
-                    document.getElementById("translateButton").style.backgroundColor = "lightblue";
-                                 
-                }
+            <input class="btn" type="button" id="leftButton" value=&larr; disabled />
+            <script>
+                $(document).on('click', "#leftButton", function (evt)  // right button listener
+                {
+                    var prevText = "October arrived, spreading a damp chill over the grounds andinto the castle. Madam Pomfrey, the nurse, was kept busy by a sudden spate of colds among the staff and students. Her Pepperup potion worked instantly, though it left the drinker smoking at the ears for several hours afterward.";
+
+                    document.getElementById("bookText").innerText = prevText;
+
+                    // enable right button
+                    var rightButton = document.getElementById("rightButton");
+                    rightButton.disabled = false;
+
+                    //disable left button
+                    var leftButton = document.getElementById("leftButton");
+                    leftButton.disabled = true;
+                });
             </script>
 
-            <!-- <button id="unsavedButton" onclick="saveClicked()"><img src="img/unsavedIcon.png" alt="unsaved" width = "80" height="80"></button>
+            <input class="btn" type="button" id="rightButton" value=&rarr; />
+            <script>
+                $(document).on('click', "#rightButton", function (evt)  // right button listener
+                {
+                    var nextPageText = "Dudley's birthday - how could he have forgotten? Harry got slowly out of bed and started looking for socks. He found a pair under his bed and, after pulling a spider off one of them, put them on. Harry was used to spiders, because the cupboard under the stairs was full of them, and that was where he slept.";
+                    document.getElementById("bookText").innerText = nextPageText;
+
+                    // disable right button
+                    var rightButton = document.getElementById("rightButton");
+                    rightButton.disabled = true;
+
+                    //enable left button
+                    var leftButton = document.getElementById("leftButton");
+                    leftButton.disabled = false;
+                });
+            </script>
+        </div>
+
+        <!-- Translate text -->
+        <button id="translateButton" onclick="changeText()"> <img src="img/translate.png" alt="translate" width="70"
+                height="70"></button>
+        <script>
+            var translateButtonState = false;
+
+            function changeText() {
+                // change book text
+                var translatedText = "Llegó octubre, esparciendo un frío húmedo por los terrenos y el interior del castillo. Madame Pomfrey, la enfermera, se mantuvo ocupada debido a una repentina oleada de resfriados entre el personal y los estudiantes. Su poción Pepperup funcionó instantáneamente, aunque dejó al bebedor humeando en los oídos durante varias horas después.";
+
+                // check the current state of the translate button
+                if (translateButtonState) {
+                    // if it's on, revert to original text and reset language
+                    document.getElementById("bookText").innerText = "October arrived, spreading a damp chill over the grounds and into the castle. Madam Pomfrey, the nurse, was kept busy by a sudden spate of colds among the staff and students. Her Pepperup potion worked instantly, though it left the drinker smoking at the ears for several hours afterward.";
+                    document.getElementById("language-chosen").innerText = "Language: English";
+                    translateButtonState = false;
+                } else {
+                    // if it's off, set translated text and change language
+                    document.getElementById("bookText").innerText = translatedText;
+                    document.getElementById("language-chosen").innerText = "Language: Spanish";
+                    translateButtonState = true;
+                }
+
+                // change button color to show as "on" or "off"
+                var button = document.getElementById("translateButton");
+                button.style.backgroundColor = translateButtonState ? "lightblue" : "";
+            }
+        </script>
+
+        <!-- <button id="unsavedButton" onclick="saveClicked()"><img src="img/unsavedIcon.png" alt="unsaved" width = "80" height="80"></button>
             <script>
                 function saveClicked(){
                     // change button color to show as "on"
@@ -119,7 +132,8 @@
                 }
             </script> -->
 
-            <button id="closeButton"><img src="img/x-mark.png" alt="close screen" width="80" height="80"></button>
-        </div>
-    </body>
+        <button id="closeButton"><img src="img/x-mark.png" alt="close screen" width="80" height="80"></button>
+    </div>
+</body>
+
 </html>
