@@ -15,12 +15,12 @@
     <div class="container">
         <div class="search-box">
             <input type="text" placeholder="Search..." id="search">
-            <button type="sumbit">Search</button>
+            <button type="sumbit" id="searchBut">Search</button>
         </div>
     </div>
 
     <div class="book-grid" id="bookGrid">
-        <div class="book">
+        <div class="book" id="hide">
             <a href="bookScreen.html">
                 <img src="img/book.png" alt="Harry Potter">
                 <p>Harry Potter</p>
@@ -46,8 +46,14 @@
         </div>
         <div class="book">
             <a href="bookScreen.html">
-                <img src="img/book.png" alt="Dictionary">
-                <p>Dictionary</p>
+                <img src="img/book.png" alt="House of Leaves">
+                <p>House of Leaves</p>
+            </a>
+        </div>
+        <div class="book" id="hide">
+            <a href="bookScreen.html">
+                <img src="img/book.png" alt="The Stranger">
+                <p>The Stranger</p>
             </a>
         </div>
     </div>
@@ -79,10 +85,12 @@
     <script>
         // JavaScript for filtering books based on search input
         const searchInput = document.getElementById('search');
+        const searchButton = document.getElementById('searchBut');
         const bookGrid = document.getElementById('bookGrid');
         const books = document.querySelectorAll('.book');
+        
 
-        searchInput.addEventListener('input', function () {
+        searchButton.addEventListener('click', function () {
             const searchTerm = searchInput.value.toLowerCase();
 
             books.forEach(book => {
@@ -91,6 +99,8 @@
                 book.style.display = isVisible ? 'block' : 'none';
             });
         });
+
+        
     </script>
 
 </body>
