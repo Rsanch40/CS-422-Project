@@ -18,6 +18,19 @@
 
 <body>
     <div class="bookPage">
+        
+
+        <button id="openPopupButton">Open Popup</button>
+
+        <div id="popupContainer" class="popup-container">
+            <div class="popup">
+                <span class="close" id="closePopup">&times;</span>
+                <label for="inputText">Type something:</label>
+                <input type="text" id="inputText">
+                <button id="submitInput">Submit</button>
+            </div>
+        </div>
+        <script src="javaScriptFiles/saveWords.js"></script>
 
         <button id="soundButton" onclick="soundClicked()"><img src="img/sound.png" width="80" height="80"></button>
         <script>

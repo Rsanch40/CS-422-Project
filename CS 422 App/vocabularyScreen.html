@@ -19,38 +19,12 @@
 <!-- use this for the vocab section construction https://www.youtube.com/watch?v=mizkwuCqFsc-->
 
 <body>
-    <div class="container">
-        <div class="add-flashcard-con">
-            <button id="add-flashcard"> Add Flashcard</button>
-        </div>
-        <!--Used for the Display of Word,Definition,Example-->
-        <div id="card-con">
-            <div class="card-list-container">
 
-            </div>
-        </div>
-    </div>
+    <h2>Words you typed:</h2>
 
-    <!--Input Form for user to fill word and definition-->
-    <div class="word-container hide" id="add-word-card">
-        <h2> Add Flashcard </h2>
-        <div class="wrapper">
-            <!--Error message-->
-            <div class="error-con">
-                <span class="hide" id="error"> Input fields cannot be empty! </span>
-            </div>
-            <!-- Close Button -->
-            <i class="fa-solid fa-xmark" id="close-btn"></i>
-        </div>
-        <label for="word"> Word: </label>
-        <textarea class="input" id="word" placeholder="Type the word here..." rows="3"></textarea>
-        <label for="definition"> Definition: </label>
-        <textarea class="input" id="definition" placeholder="Type the word here...(n/a works)" rows="3"></textarea>
-        <label for="example">Example: </label>
-        <textarea class="input" id="example" placeholder="Type your example here...(n/a works)" rows="4"></textarea>
+    <ul id="wordList"></ul>
 
-        <button id="save-btn">Save</button>
-    </div>
+    <script src="javaScriptFiles/display.js"></script>
 
     <div class="navbar" id="bottomNavbar">
         <a href="vocabularyScreen.html" class="active">
