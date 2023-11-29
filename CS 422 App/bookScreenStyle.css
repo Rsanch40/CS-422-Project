@@ -67,6 +67,17 @@
     /* background-color: gray; */
 }
 
+#openPopupButton{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    height:80px;
+    width: 100px;
+    /* background-color: gray; */
+    text-align: left;
+}
+
 html{
     height:100%;
 }
@@ -176,3 +187,5 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+
+.openPopupButton{}

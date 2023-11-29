@@ -18,19 +18,31 @@
 
 <body>
     <div class="bookPage">
-        
 
-        <button id="openPopupButton">Open Popup</button>
 
-        <div id="popupContainer" class="popup-container">
-            <div class="popup">
+        <button id="openPopupButton" onclick="openPopupButtonFunc()"><img src="img/flashcard.png" width="80" height="80"></button>
+
+        <div id="popupContainer" class="modal">
+            <div class="modal-content">
                 <span class="close" id="closePopup">&times;</span>
                 <label for="inputText">Type something:</label>
                 <input type="text" id="inputText">
                 <button id="submitInput">Submit</button>
             </div>
         </div>
+        
         <script src="javaScriptFiles/saveWords.js"></script>
+        <script>
+            function openPopupButtonFunc() {
+                var modal = document.getElementById('openPopupButton');
+                modal.style.display = 'block';
+            }
+
+            function closeHelpModal() {
+                var modal = document.getElementById('openPopupButton');
+                modal.style.display = 'none';
+            }
+        </script>
 
         <button id="soundButton" onclick="soundClicked()"><img src="img/sound.png" width="80" height="80"></button>
         <script>

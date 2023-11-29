@@ -1,4 +1,7 @@
+// localStorage.clear();
+
 document.addEventListener('DOMContentLoaded', function() {
+    localStorage.clear();
     var openPopupButton = document.getElementById('openPopupButton');
     var closePopupButton = document.getElementById('closePopup');
     var popupContainer = document.getElementById('popupContainer');
