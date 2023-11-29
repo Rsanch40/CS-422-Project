@@ -19,8 +19,10 @@
 <body>
     <div class="bookPage">
 
-
-        <button id="openPopupButton" onclick="openPopupButtonFunc()"><img src="img/flashcard.png" width="80" height="80"></button>
+        <button id="openPopupButton" onclick="openPopupButtonFunc()">
+            <img src="img/flashcard.png" width="80" height="80">
+            <span class="button-label">Add word to vocabulary</span>
+        </button>
 
         <div id="popupContainer" class="modal">
             <div class="modal-content">
@@ -44,7 +46,10 @@
             }
         </script>
 
-        <button id="soundButton" onclick="soundClicked()"><img src="img/sound.png" width="80" height="80"></button>
+        <button id="soundButton" onclick="soundClicked()">
+            <img src="img/sound.png" width="80" height="80">
+            <span class="button-label">Listen Along</span>
+            </button>
         <script>
             function soundClicked() {
                 // change button color to show as "on"
@@ -53,8 +58,10 @@
         </script>
 
 
-        <button id="helpButton" onclick="goToHelpScreen()"><img src="img/questionIcon.png" alt="help" width="80"
-                height="80"></button>
+        <button id="helpButton" onclick="goToHelpScreen()">
+            <img src="img/questionIcon.png" alt="help" width="80" height="80">
+            <span class="button-label">Help</span>
+        </button>
 
         <!-- Send user to help screen -->
         <script>
@@ -79,6 +86,7 @@
         <div id="helpModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeHelpModal()">&times;</span>
+                <span class="modal-title">Help Menu</span>
                 <div class="helpMenu">
                     <img src="img/sound.png" height="70" width="70" id="soundImage">
                     <p id="soundIconExplain"> Starts the English Voice reader</p>
@@ -88,6 +96,12 @@
 
                     <img src="img/unsavedIcon.png" height="70" width="70" id="unsavedImage">
                     <p id="unsavedIconExplain"> Saves the book to favorites</p>
+
+                    <img src="img/flashcard.png" height="70" width="70" id="flashcard">
+                    <p id="flashcardExplain"> Allows you to add a word to your vocabulary list.</p>
+
+                    <img src="img/x-mark.png" height="70" width="70" id="exit">
+                    <p id="xmark">Takes you out of the reader and puts you back on the page you initially accessed the reader in.</p>
                     <!-- 
                     <p id="addWordsExplain"> To add words onto the vocabulary just hold down on a word till its
                         highlighted and then click the add vocabulary button.</p> -->
@@ -151,8 +165,10 @@
         </div>
 
         <!-- Translate text -->
-        <button id="translateButton" onclick="changeText()"> <img src="img/translate.png" alt="translate" width="70"
-                height="70"></button>
+        <button id="translateButton" onclick="changeText()"> 
+            <img src="img/translate.png" alt="translate" width="70" height="70">
+            <span class="button-label">Translate text</span>
+            </button>
         <script>
             var translateButtonState = false;
 
@@ -190,7 +206,10 @@
                 }
             </script> -->
 
-        <button id="closeButton"><img src="img/x-mark.png" alt="close screen" width="80" height="80"></button>
+        <button id="closeButton">
+            <img src="img/x-mark.png" alt="close screen" width="80" height="80">
+            <span class="button-label">Exit Reader</span>
+        </button>
         <script>
             document.getElementById('closeButton').addEventListener('click', function () {
                 goBack();
